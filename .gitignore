@@ -1,0 +1,32 @@
+# Variables de entorno
+.env
+proyecto_rfm\.env
+
+# Entornos virtuales
+.venv/
+venv/
+
+# Archivos de Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Jupyter
+.ipynb_checkpoints/
+
+# VS Code
+.vscode/
+
+# Archivos temporales
+*.log
+*.tmp
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+
+# no subir CSV generados
+proyecto_rfm\data\clientes_rfm.csv
+proyecto_rfm\data\clientes_clusterizados.csv
