@@ -1,6 +1,7 @@
 import pandas as pd
 import pyodbc
 import os
+import time
 
 
 def conectar_bd(server, database, user=None, password=None):
@@ -44,13 +45,22 @@ def ejecutar_query(conexion, query):
     Ejecuta una consulta SQL y retorna un DataFrame.
     """
     try:
+        inicio = time.time()
+
+        print("Ejecutando consulta...")
+
         df = pd.read_sql(query, conexion)
-        print(f"Query ejecutada exitosamente. Filas obtenidas: {len(df)}")
+
+        fin = time.time()
+
+        print(f"Tiempo: {fin - inicio:.2f} segundos")
+        print(f"Filas obtenidas: {len(df)}")
+
         return df
+
     except Exception as e:
         print(f"Error al ejecutar la query: {e}")
         return None
-
 
 def cargar_query_desde_archivo(ruta_sql):
     """
