@@ -30,3 +30,6 @@ Desktop.ini
 # no subir CSV generados
 proyecto_rfm\data\clientes_rfm.csv
 proyecto_rfm\data\clientes_clusterizados.csv
+
+# no subir outputs generados
+JupyterNotebookDonald\outputs
